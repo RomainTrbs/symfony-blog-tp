@@ -10,8 +10,6 @@
             <tr>
                 <th>Id</th>
                 <th>Title</th>
-                <th>Picture</th>
-                <th>Text</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -20,11 +18,9 @@
             <tr>
                 <td>{{ page.id }}</td>
                 <td>{{ page.title }}</td>
-                <td>{{ page.picture }}</td>
-                <td>{{ page.text }}</td>
                 <td>
-                    <a href="{{ path('app_page_show', {'id': page.id}) }}">show</a>
-                    <a href="{{ path('app_page_edit', {'id': page.id}) }}">edit</a>
+                    <a type="button" href="{{ path('app_page_show', {'id': page.id}) }}" class="btn btn-outline-dark">show</a>
+                    <a type="button" href="{{ path('app_page_edit', {'id': page.id}) }}" class="btn btn-outline-dark">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -35,5 +31,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_page_new') }}">Create new</a>
+    <a type="button" href="{{ path('app_page_new') }}" class="btn btn-outline-dark">Create new</a>
 {% endblock %}
