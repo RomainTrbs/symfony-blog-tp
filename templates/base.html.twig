@@ -52,17 +52,28 @@
                   {% if is_granted('ROLE_ADMIN') %}
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Pages
+                      {{'Categories'|trans}}
                     </a>
                     <ul class="dropdown-menu">
                       <li>
-                      <a class="dropdown-item" href="/page">Liste Des Pages</a>
+                      <a class="dropdown-item" href="/category">{{ 'Categories Index'|trans }}</a>
                       </li>
                       <li>
-                      <a class="dropdown-item" href="/page/new" >Créer Une Page</a>
+                      <a class="dropdown-item" href="/category/new" >{{ 'Add new Category'|trans }}</a>
                       </li>
                     </ul>
-
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      {{ 'Pages'|trans }}
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                      <a class="dropdown-item" href="/page">{{'Pages index'|trans }}</a>
+                      </li>
+                      <li>
+                      <a class="dropdown-item" href="/page/new" >{{'Create Page'|trans }}</a>
+                      </li>
+                    </ul>
                     {% endif %}
                   </li>
                   </ul>
