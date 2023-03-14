@@ -29,19 +29,53 @@
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/page/1">Accueil</a>
                   </li>
+
+                    
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     {{ 'Formations'|trans }}
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                      <a class="dropdown-item" href="#">{{ 'Our Formations'|trans }}</a>
+                      </li>
+                      <li>
+                      <a class="dropdown-item" href="#" >{{ 'Formations Incoming'|trans }}</a>
+                      </li>
+                      <li>
+                      <a class="dropdown-item" href="#" >{{ 'Give Your Opinion'|trans }}</a>
+                      </li>
+                      <li>
+                      <a class="dropdown-item" href="#" >{{ 'Suggest a Formation'|trans }}</a>
+                      </li>
+                    </ul>
+                  {% if is_granted('ROLE_ADMIN') %}
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Pages
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="page">Voir</a></li>
-                      <li><a class="dropdown-item" href="#">Modifier</a></li>
+                      <li>
+                      <a class="dropdown-item" href="/page">Liste Des Pages</a>
+                      </li>
+                      <li>
+                      <a class="dropdown-item" href="/page/new" >Créer Une Page</a>
+                      </li>
                     </ul>
+
+                    {% endif %}
                   </li>
                   </ul>
                   <ul class="navbar-nav align-right">
                   <li class="nav-item">
-                    <a class="nav-link" href="login" >Se Connecter</a>
+                  {% if app.user %}
+                    <a class="nav-link" href="/logout" >Sign Out</a>
+                  {% else %}
+                    <a class="nav-link" href="/register"  >Sign Up</a>
+                    </li>
+                    <li>
+                    <a class="nav-link" href="/login" >Sign In</a>
+                  {% endif %}
                   </li>
                   </ul>
               </div>
