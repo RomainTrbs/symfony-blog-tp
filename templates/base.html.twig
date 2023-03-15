@@ -80,12 +80,12 @@
                   <ul class="navbar-nav align-right">
                   <li class="nav-item">
                   {% if app.user %}
-                    <a class="nav-link" href="/logout" >Sign Out</a>
+                    <a class="nav-link" href="/logout" >{{ 'Sign Out'|trans }}</a>
                   {% else %}
-                    <a class="nav-link" href="/register"  >Sign Up</a>
+                    <a class="nav-link" href="/register"  >{{ 'Register'|trans }}</a>
                     </li>
                     <li>
-                    <a class="nav-link" href="/login" >Sign In</a>
+                    <a class="nav-link" href="/login" >{{ 'Login'|trans }}</a>
                   {% endif %}
                   </li>
                   </ul>

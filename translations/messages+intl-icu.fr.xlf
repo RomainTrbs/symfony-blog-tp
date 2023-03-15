@@ -29,6 +29,42 @@
         <source>Suggest a Formation</source>
         <target>Suggerer une formation</target>
       </trans-unit>
+      <trans-unit id="uLHYlMa" resname="Categories">
+        <source>Categories</source>
+        <target>Categories</target>
+      </trans-unit>
+      <trans-unit id="06A8drL" resname="Categories Index">
+        <source>Categories Index</source>
+        <target>Liste des Categories</target>
+      </trans-unit>
+      <trans-unit id="mFCnV1s" resname="Add new Category">
+        <source>Add new Category</source>
+        <target>Ajouter une nouvelle Categorie</target>
+      </trans-unit>
+      <trans-unit id="kEbaFq6" resname="Pages">
+        <source>Pages</source>
+        <target>Pages</target>
+      </trans-unit>
+      <trans-unit id="lT4ivaA" resname="Pages index">
+        <source>Pages index</source>
+        <target>Liste des Pages</target>
+      </trans-unit>
+      <trans-unit id="M9tMA3i" resname="Create Page">
+        <source>Create Page</source>
+        <target>Créer une Page</target>
+      </trans-unit>
+      <trans-unit id="CxhLxdU" resname="Sign Out">
+        <source>Sign Out</source>
+        <target>Se Déconnecter</target>
+      </trans-unit>
+      <trans-unit id="R94jWG5" resname="Sign Up">
+        <source>Register</source>
+        <target>Créer un compte</target>
+      </trans-unit>
+      <trans-unit id="vMC8yRQ" resname="Sign In">
+        <source>Login</source>
+        <target>Se Connecter</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
