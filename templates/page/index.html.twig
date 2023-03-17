@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Page index{% endblock %}
+{% block title %}{{'Page Index'|trans}}{% endblock %}
 
 {% block body %}
-    <h1>Page index</h1>
+    <h1>{{'Page Index'|trans}}</h1>
 
     <table class="table">
         <thead>
@@ -19,17 +19,17 @@
                 <td>{{ page.id }}</td>
                 <td>{{ page.title }}</td>
                 <td>
-                    <a type="button" href="{{ path('app_page_show', {'id': page.id}) }}" class="btn btn-outline-dark">show</a>
-                    <a type="button" href="{{ path('app_page_edit', {'id': page.id}) }}" class="btn btn-outline-dark">edit</a>
+                    <a type="button" href="{{ path('app_page_show', {'id': page.id}) }}" class="btn btn-outline-dark">{{'show'|trans}}</a>
+                    <a type="button" href="{{ path('app_page_edit', {'id': page.id}) }}" class="btn btn-outline-dark">{{'edit'|trans}}</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="5">no records found</td>
+                <td colspan="5">{{'no records found'|trans}}</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a type="button" href="{{ path('app_page_new') }}" class="btn btn-outline-dark">Create new</a>
+    <a type="button" href="{{ path('app_page_new') }}" class="btn btn-outline-dark">{{'Create New'|trans}}</a>
 {% endblock %}

@@ -31,15 +31,15 @@
       </trans-unit>
       <trans-unit id="uLHYlMa" resname="Categories">
         <source>Categories</source>
-        <target>Categories</target>
+        <target>Catégories</target>
       </trans-unit>
       <trans-unit id="06A8drL" resname="Categories Index">
         <source>Categories Index</source>
-        <target>Liste des Categories</target>
+        <target>Liste des Catégories</target>
       </trans-unit>
       <trans-unit id="mFCnV1s" resname="Add new Category">
         <source>Add new Category</source>
-        <target>Ajouter une nouvelle Categorie</target>
+        <target>Ajouter une nouvelle Catégorie</target>
       </trans-unit>
       <trans-unit id="kEbaFq6" resname="Pages">
         <source>Pages</source>
@@ -58,12 +58,108 @@
         <target>Se Déconnecter</target>
       </trans-unit>
       <trans-unit id="R94jWG5" resname="Sign Up">
-        <source>Register</source>
+        <source>Sign Up</source>
         <target>Créer un compte</target>
       </trans-unit>
       <trans-unit id="vMC8yRQ" resname="Sign In">
+        <source>Sign In</source>
+        <target>Se Connecter</target>
+      </trans-unit>
+      <trans-unit id="u3I07BJ" resname="Register">
+        <source>Register</source>
+        <target>S'Inscrire</target>
+      </trans-unit>
+      <trans-unit id="nWMiwfT" resname="Login">
         <source>Login</source>
         <target>Se Connecter</target>
+      </trans-unit>
+      <trans-unit id="DZO3ehf" resname="Edit Category">
+        <source>Edit Category</source>
+        <target>Modifier les Catégories</target>
+      </trans-unit>
+      <trans-unit id="Xaj3_8K" resname="Back to list">
+        <source>Back to list</source>
+        <target>Retour à la liste</target>
+      </trans-unit>
+      <trans-unit id="ExBeWxe" resname="Category Index">
+        <source>Category Index</source>
+        <target>Liste des Catégories</target>
+      </trans-unit>
+      <trans-unit id="DfbxytN" resname="Show">
+        <source>Show</source>
+        <target>Voir</target>
+      </trans-unit>
+      <trans-unit id="RkxP.QG" resname="Edit">
+        <source>Edit</source>
+        <target>Modifier</target>
+      </trans-unit>
+      <trans-unit id="D5lam8." resname="no records found">
+        <source>no records found</source>
+        <target>Aucun Enregistrement</target>
+      </trans-unit>
+      <trans-unit id="57npwk2" resname="Create New">
+        <source>Create New</source>
+        <target>Créer une Page</target>
+      </trans-unit>
+      <trans-unit id="Ogh45Pp" resname="New Category">
+        <source>New Category</source>
+        <target>Nouvelle Catégorie</target>
+      </trans-unit>
+      <trans-unit id="DF7HItc" resname="Create New Category">
+        <source>Create New Category</source>
+        <target>Créer une Nouvelle Catégories</target>
+      </trans-unit>
+      <trans-unit id="KSwG8AR" resname="Category">
+        <source>Category</source>
+        <target>Catégories</target>
+      </trans-unit>
+      <trans-unit id="EhVukhv" resname="Id">
+        <source>Id</source>
+        <target>Id</target>
+      </trans-unit>
+      <trans-unit id="3NHVIj9" resname="Name">
+        <source>Name</source>
+        <target>Name</target>
+      </trans-unit>
+      <trans-unit id="JiEhxTc" resname="edit">
+        <source>edit</source>
+        <target>Modifier</target>
+      </trans-unit>
+      <trans-unit id="4tClSWj" resname="Delete">
+        <source>Delete</source>
+        <target>Supprimer</target>
+      </trans-unit>
+      <trans-unit id="BCu3x4I" resname="Back To List">
+        <source>Back To List</source>
+        <target>Retour à la liste</target>
+      </trans-unit>
+      <trans-unit id="XhROUNc" resname="Page Index">
+        <source>Page Index</source>
+        <target>Liste des Page</target>
+      </trans-unit>
+      <trans-unit id="HGMzUJ3" resname="show">
+        <source>show</source>
+        <target>Voir</target>
+      </trans-unit>
+      <trans-unit id="e1RO6Zq" resname="New Page">
+        <source>New Page</source>
+        <target>Nouvelle Page</target>
+      </trans-unit>
+      <trans-unit id=".hnM_8g" resname="Create new Page">
+        <source>Create new Page</source>
+        <target>Créer une nouvelle Page</target>
+      </trans-unit>
+      <trans-unit id="U0M9PNE" resname="back to list">
+        <source>back to list</source>
+        <target>Retour à la liste</target>
+      </trans-unit>
+      <trans-unit id="CjCoFdZ" resname="Page">
+        <source>Page</source>
+        <target>Pages</target>
+      </trans-unit>
+      <trans-unit id="FQn1YfJ" resname="Save">
+        <source>Save</source>
+        <target>__Save</target>
       </trans-unit>
     </body>
   </file>

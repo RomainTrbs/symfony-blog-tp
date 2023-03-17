@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\PageRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -23,6 +25,14 @@ class Page
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $text = null;
+
+    #[ORM\ManyToMany(targetEntity: Category::class, inversedBy: 'pages')]
+    private Collection $category;
+
+    public function __construct()
+    {
+        $this->category = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -61,6 +71,30 @@ class Page
     public function setText(?string $text): self
     {
         $this->text = $text;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Category>
+     */
+    public function getCategory(): Collection
+    {
+        return $this->category;
+    }
+
+    public function addCategory(Category $category): self
+    {
+        if (!$this->category->contains($category)) {
+            $this->category->add($category);
+        }
+
+        return $this;
+    }
+
+    public function removeCategory(Category $category): self
+    {
+        $this->category->removeElement($category);
 
         return $this;
     }
