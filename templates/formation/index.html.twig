@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formation index{% endblock %}
+
+{% block body %}
+    <h1>Formation index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Content</th>
+                <th>Capacity</th>
+                <th>Price</th>
+                <th>CreatedAt</th>
+                <th>StartDateTime</th>
+                <th>EndDateTime</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for formation in formations %}
+            <tr>
+                <td>{{ formation.id }}</td>
+                <td>{{ formation.name }}</td>
+                <td>{{ formation.content }}</td>
+                <td>{{ formation.capacity }}</td>
+                <td>{{ formation.price }}</td>
+                <td>{{ formation.createdAt ? formation.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ formation.startDateTime ? formation.startDateTime|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ formation.endDateTime ? formation.endDateTime|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_formation_show', {'id': formation.id}) }}" class="btn btn-outline-dark">show</a>
+                    <a href="{{ path('app_formation_edit', {'id': formation.id}) }}" class="btn btn-outline-dark">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_formation_new') }}" class="btn btn-outline-dark">Create new</a>
+{% endblock %}

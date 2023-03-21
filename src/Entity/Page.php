@@ -9,7 +9,7 @@ use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: PageRepository::class)]
-//#[ORM\Table(name: 'tbl_user')]
+#[ORM\Table(name: 'tbl_page')]
 class Page
 {
     #[ORM\Id]
