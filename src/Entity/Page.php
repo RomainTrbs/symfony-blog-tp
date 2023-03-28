@@ -26,6 +26,9 @@ class Page
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $text = null;
 
+    #[ORM\Column]
+    private ?int $Number = null;
+
 
     public function __construct()
     {
@@ -69,6 +72,18 @@ class Page
     public function setText(?string $text): self
     {
         $this->text = $text;
+
+        return $this;
+    }
+
+    public function getNumber(): ?int
+    {
+        return $this->Number;
+    }
+
+    public function setNumber(?int $Number): self
+    {
+        $this->Number = $Number;
 
         return $this;
     }

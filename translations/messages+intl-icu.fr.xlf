@@ -159,7 +159,55 @@
       </trans-unit>
       <trans-unit id="FQn1YfJ" resname="Save">
         <source>Save</source>
-        <target>__Save</target>
+        <target>Sauvegarder</target>
+      </trans-unit>
+      <trans-unit id="OnhpU4i" resname="Home">
+        <source>Home</source>
+        <target>Accueil</target>
+      </trans-unit>
+      <trans-unit id="dUOYu_o" resname="Formation Center">
+        <source>Formation Center</source>
+        <target>Centre de formation</target>
+      </trans-unit>
+      <trans-unit id="EDRROVB" resname="Catalogue">
+        <source>Catalogue</source>
+        <target>catalogue</target>
+      </trans-unit>
+      <trans-unit id="xkbCtF6" resname="Rate a Formation">
+        <source>Rate a Formation</source>
+        <target>Evaluer une Formation</target>
+      </trans-unit>
+      <trans-unit id="zzNMu3h" resname="Tutos">
+        <source>Tutos</source>
+        <target>Tutos</target>
+      </trans-unit>
+      <trans-unit id="ulSz8Iz" resname="Qualiopi Certification">
+        <source>Qualiopi Certification</source>
+        <target>Certification Qualiopi</target>
+      </trans-unit>
+      <trans-unit id="K1w9JnI" resname="Contact">
+        <source>Contact</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="6E33bLG" resname="Infos légales">
+        <source>Infos légales</source>
+        <target>Infos légales</target>
+      </trans-unit>
+      <trans-unit id="6XBd82g" resname="Règles de confidentialité">
+        <source>Règles de confidentialité</source>
+        <target>Règles de confidentialité</target>
+      </trans-unit>
+      <trans-unit id="5CgHN_x" resname="Réservé">
+        <source>Réservé</source>
+        <target>Réservé</target>
+      </trans-unit>
+      <trans-unit id="UXIAkLp" resname="Formations index">
+        <source>Formations index</source>
+        <target>Index des Formations</target>
+      </trans-unit>
+      <trans-unit id="cYtqGRs" resname="Create Formations">
+        <source>Create Formations</source>
+        <target>Creer une Formation</target>
       </trans-unit>
     </body>
   </file>
