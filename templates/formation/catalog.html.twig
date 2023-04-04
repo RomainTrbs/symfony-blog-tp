@@ -20,9 +20,11 @@
 				<div class="accordion-body">
                 <strong>Price : </strong>{{ formation.price }}€<br>
                 <strong>Capacity : </strong>{{ formation.capacity }}<br>
-                <strong>Start Date : </strong>{{ formation.startDateTime ? formation.startDateTime|date('Y-m-d H:i:s') : '' }}<br>
-                <strong>End Date : </strong>{{ formation.endDateTime ? formation.endDateTime|date('Y-m-d H:i:s') : '' }}<br><br>
-					{{ formation.content }}
+                <strong>Start Date : </strong>{{ formation.startDateTime ? formation.startDateTime|date('Y/m/d') : '' }}<br>
+                <strong>End Date : </strong>{{ formation.endDateTime ? formation.endDateTime|date('Y/m/d') : '' }}<br><br>
+					{{ formation.content|raw  }}
+					<br>
+					<a href="/formation/pdf/{{ formation.id }}" class="btn btn-outline-dark" target="_blank">PDF</a>
 				</div>
 			</div>
 		</div>

@@ -2,18 +2,51 @@
 
 namespace App\Controller;
 
+use TCPDF;
 use DateTimeImmutable;
 use App\Entity\Formation;
 use App\Form\FormationType;
+use App\Services\ImageUploaderHelper;
 use App\Repository\FormationRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\String\Slugger\SluggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 #[Route('/formation')]
 class FormationController extends AbstractController
 {
+    #[Route('/pdf/{id}', name: 'app_formation_pdf', methods: ['GET'])]
+    public function pdf(Formation $formation): Response
+    {
+        $pdf = new TCPDF();
+
+        $pdf->SetAuthor('SIO1 team');
+        $pdf->SetTitle($formation->getName());
+
+        $pdf->SetCellPaddings(1, 1, 1, 1);
+        $pdf->SetCellMargins(1, 1, 1, 1);
+
+        $pdf->AddPage();
+
+        $pdf->setXY(10,10);
+        $pdf->SetFillColor(255,255,255);
+        $pdf->SetFont('helvetica','',18);
+        $pdf->SetTextColor(0,0,255);
+        $pdf->MultiCell(185,10,$formation->getName(),1,'P',1,0,'','',true);
+        
+        $pdf->setXY(10,25);
+        $pdf->SetFillColor(10, 10, 10);
+        $pdf->SetFont('times','',12);
+        $pdf->SetTextColor(0,0,255);
+        $pdf->writeHTML($formation->getContent());
+
+        $pdf->Image('images/fcpro3.jpg', 10, 10, 55, 50);
+
+        return $pdf->Output('fcpro-formation-'.$formation->getId().'.pdf', 'I') ;
+    }
+
     #[Route('/catalog', name: 'app_formation_catalog', methods: ['GET'])]
     public function catalog(FormationRepository $formationRepository): Response
     {
@@ -63,15 +96,15 @@ class FormationController extends AbstractController
     }
 
     #[Route('/{id}/edit', name: 'app_formation_edit', methods: ['GET', 'POST'])]
-    public function edit(Request $request, Formation $formation, FormationRepository $formationRepository): Response
+    public function edit(Request $request, ImageUploaderHelper $imageUploaderHelper, Formation $formation, FormationRepository $formationRepository): Response
     {
         $this->denyAccessUnlessGranted('ROLE_ADMIN');
 
         $form = $this->createForm(FormationType::class, $formation);
         $form->handleRequest($request);
-
         if ($form->isSubmitted() && $form->isValid()) {
-            $formationRepository->save($formation, true);
+
+            $imageUploaderHelper->uploadImage($form , $formation);
 
             return $this->redirectToRoute('app_formation_index', [], Response::HTTP_SEE_OTHER);
         }

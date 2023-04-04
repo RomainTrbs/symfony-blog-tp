@@ -1,4 +1,34 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn btn-outline-dark">{{ button_label|default('Save') }}</button>
+
+        <div class="row">
+            {{ form_row(form.name) }}
+        </div>
+        <div class="row">
+            <img src="{{asset('uploads/images/' ~ formation.imageFileName)}}"/>
+        </div>
+
+            {{ form_row(form.content) }}
+
+        <div class="row">
+           {{ form_row(form.capacity) }}
+           {{ form_row(form.price) }}
+        </div>
+        <div class="row">
+            {{ form_row(form.speaker) }}
+            {{ form_row(form.startDateTime) }}
+        </div>
+        <div class="row">
+            {{ form_row(form.endDateTime) }}
+            {{ form_row(form.createdBy) }}
+        </div>
+
+
+    
+    
+    
+    
+    
+    
+
+    <button class="btn btn-outline-dark"><i class="fa-solid fa-check"></i>{{ button_label|default('') }}</button>
 {{ form_end(form) }}
