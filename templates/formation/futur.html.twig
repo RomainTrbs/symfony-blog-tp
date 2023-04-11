@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{'Formation index'|trans}}
+{% endblock %}
+
+{% block body %}
+	<h1>{{'Formation index'|trans}}</h1>
+
+	<div id="carouselExampleCaptions" class="carousel carousel-dark slide">
+		<div class="carousel-indicators">
+			<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+			<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+
+		</div>
+		<div class="carousel-inner">
+
+			{% set i = 0 %}
+			{% for formation in formations %}
+				{% set i = i + 1 %}
+				<div class="carousel-item {% if i == 1 %} active {% endif %}">
+					<div class="row">
+						{% if formation[1] is defined %}
+							<div class="col-3">
+								<div class="card" style="width: 18rem;">
+									<img src="/uploads/images/{{ formation[1].ImageFileName }}" class="card-img-top" alt="...">
+									<div class="card-body">
+										<h5 class="card-title">{{ formation[1].name }}</h5>
+										<p class="card-text">{{ formation[1].name }}</p>
+										<a href="/formation/pdf/{{ formation[1].id }}" class="btn btn-outline-dark" target="_blank">PDF</a>
+									</div>
+								</div>
+							</div>
+						{% endif %}
+						{% if formation[2] is defined %}
+							<div class="col-3">
+								<div class="card" style="width: 18rem;">
+									<img src="/uploads/images/{{ formation[2].ImageFileName }}" class="card-img-top" alt="...">
+									<div class="card-body">
+										<h5 class="card-title">{{ formation[2].name }}</h5>
+										<p class="card-text">{{ formation[2].name }}</p>
+										<a href="/formation/pdf/{{ formation[2].id }}" class="btn btn-outline-dark" target="_blank">PDF</a>
+									</div>
+								</div>
+							</div>
+						{% endif %}
+						{% if formation[3] is defined %}
+							<div class="col-3">
+								<div class="card" style="width: 18rem;">
+									<img src="/uploads/images/{{ formation[3].ImageFileName }}" class="card-img-top" alt="...">
+									<div class="card-body">
+										<h5 class="card-title">{{ formation[3].name }}</h5>
+										<p class="card-text">{{ formation[3].name }}</p>
+										<a href="/formation/pdf/{{ formation[3].id }}" class="btn btn-outline-dark" target="_blank">PDF</a>
+									</div>
+								</div>
+							</div>
+						{% endif %}
+					</div>
+
+				</div>
+
+			{% endfor %}
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		</button>
+	</div>
+{% endblock %}
