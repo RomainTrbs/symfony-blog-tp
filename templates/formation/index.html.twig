@@ -16,7 +16,7 @@
                 <th>CreatedAt</th>
                 <th>StartDateTime</th>
                 <th>EndDateTime</th>
-                <th width="120">actions</th>
+                <th width="160">actions</th>
             </tr>
         </thead>
         <tbody>
@@ -33,6 +33,7 @@
                 <td>
                     <a href="{{ path('app_formation_show', {'id': formation.id}) }}" class="btn btn-outline-dark"><i class="fa-solid fa-eye"></i></a>
                     <a href="{{ path('app_formation_edit', {'id': formation.id}) }}" class="btn btn-outline-dark"><i class="fa-solid fa-pencil"></i></a>
+                    <a href="{{ path('app_formation_duplicate', {'id': formation.id}) }}" class="btn btn-outline-dark"><i class="fa-regular fa-copy"></i></a>
                 </td>
             </tr>
         {% else %}
