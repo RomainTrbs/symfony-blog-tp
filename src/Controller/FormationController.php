@@ -37,7 +37,7 @@ class FormationController extends AbstractController
         $pdf->SetFont('helvetica', 'B', 20);
         $pdf->SetFillColor(160,222,255);
         $pdf->SetTextColor(0, 63,144);
-        $pdf->Image('images/fcpro.jpg', 10, 10, 37, 35, 'JPG', 'https://fcpro-apain.bts.sio-ndlp.fr/', '', true, 150, '', false, false, 0, false, false, false);
+        $pdf->Image('images/fcpro3.jpg', 10, 10, 37, 35, 'JPG', 'https://fcpro-rtirbois.bts.sio-ndlp.fr/page/1', '', true, 150, '', false, false, 0, false, false, false);
         $pdf->MultiCell(187, 20, "PROGRAMME DE FORMATION", 0, 'C', 1, 1, '', '', true, 0, false, true, 20, 'M');
 
         $pdf->SetFont('helvetica', 'B', 17);
@@ -195,22 +195,9 @@ Evaluation de satisfaction de la formation par les stagiaires.</div>
     #[Route('/catalog', name: 'app_formation_catalog', methods: ['GET'])]
     public function catalog(FormationRepository $formationRepository): Response
     {
-        $formationsPerThree = array();
-
-        $formations = $formationRepository->findAllInTheFutur();
-
-        $i=0; $j=1;
-        foreach ($formations as $formation) {
-            $i++;
-            if ($i>3) {
-                $j++; $i=1;
-            }
-            $formationsPerThree[$j][$i] = $formation;
-        }
-        dump($formations);
-        dump($formationsPerThree);
-        
-        return $this->render('formation/catalog.html.twig', ['formations' => $formationsPerThree,]);
+        return $this->render('formation/catalog.html.twig', [
+            'formations' => $formationRepository->findAll(),
+        ]);
     }
 
     #[Route('/', name: 'app_formation_index', methods: ['GET'])]
