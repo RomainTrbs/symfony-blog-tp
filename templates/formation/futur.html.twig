@@ -18,7 +18,7 @@
 						{% if formation[1] is defined %}
 							<div class="col-auto">
 								<div class="card border-dark mb-3" style="width: 18rem; height: 428px;">
-									<img src="/uploads/images/{{ formation[1].ImageFileName }}" class="card-img-top " style="height: 286px;" alt="...">
+									<img src="/uploads/images/{{ formation[1].ImageFileName }}" class="card-img-top " style="height: 286px;" alt="..."> 
 									<div class="card-body">
 										<h5 class="card-title">{{ formation[1].name }}</h5>
 										<p class="card-text">{{ formation[1].name }}</p>
@@ -30,7 +30,7 @@
 						{% if formation[2] is defined %}
 							<div class="col-auto">
 								<div class="card border-dark mb-3" style="width: 18rem;">
-									<img src="/uploads/images/{{ formation[2].ImageFileName }}" class="card-img-top" style="height: 286px;" alt="...">
+									<img src="/uploads/images/{{ formation[2].ImageFileName }}"class="card-img-top" style="height: 286px;" alt="...">
 									<div class="card-body">
 										<h5 class="card-title">{{ formation[2].name }}</h5>
 										<p class="card-text">{{ formation[2].name }}</p>
@@ -56,7 +56,9 @@
 				</div>
 
 			{% endfor %}
+			
 		</div>
+		 {% if formations|length > 1 %} 
 		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 			<span class="visually-hidden">Previous</span>
@@ -65,5 +67,6 @@
 			<span class="carousel-control-next-icon" aria-hidden="true"></span>
 			<span class="visually-hidden">Next</span>
 		</button>
+	  {% endif %}  
 	</div>
 {% endblock %}
